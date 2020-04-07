@@ -6,6 +6,7 @@ const fetchSample = async()=>{
 
 const fetchWeatherData = async(address)=>{
     document.querySelector('#message-1').innerHTML= 'Loading...';
+    document.querySelector('#message-2').innerHTML = '';
     const response = await fetch(`/weather?address=${address}`);
     const data = await response.json();
     console.log(data);
