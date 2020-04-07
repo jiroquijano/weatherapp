@@ -8,6 +8,7 @@ const app = express();
 const publicDirectoryPath = path.join(__dirname,'../public');
 const viewPath = path.join(__dirname,'../templates/views');
 const partialsPath = path.join(__dirname,'../templates/partials');
+const port = process.env.PORT || 3000;
 
 //setup handlebars engine and views location.
 //app.set is used for setting application variables which could be reserved or custom. You can use get to fetch the values.
@@ -91,6 +92,6 @@ app.get('*',(req,res)=>{
     });
 });
 
-app.listen(3000,()=>{ //starts listening to localhost port
-    console.log('Server is up on port 3000');
+app.listen(port,()=>{ //starts listening to localhost port
+    console.log(`Server is up on port ${port}`);
 });
