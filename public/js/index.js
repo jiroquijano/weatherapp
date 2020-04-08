@@ -19,10 +19,6 @@ const fetchWeatherData = async(address)=>{
     document.querySelector('#message-2').innerHTML = `${data.forecastData}`;
 };
 
-// fetchSample();
-// const url = new URL(window.location.href).searchParams;
-// fetchWeatherData(url.get('address'));
-
 const getSearchValue = () =>{
     const search = document.querySelector('.search-input').value;
     return search;
